@@ -1,0 +1,312 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Poppins');
+*
+{
+    outline: none !important;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+header {
+    position: relative;
+    z-index: 1000000;
+}
+p {
+    font-size: 1.15rem
+}
+.navbar {
+    transition: 0.5s;
+    background: transparent !important;
+}
+.navbar-light .navbar-toggler {
+    color: rgba(255,255,255,.8);
+    border-color: rgba(255,255,255,.8);
+}
+.navbar.scrolled {
+    background: #000 !important;
+    transition: 0.5s;
+}
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show > .nav-link {
+    color: #000;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(255,255,255,.8);
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: rgb(255, 0, 0);
+}
+.navbar-light .navbar-brand,
+.navbar-light .navbar-brand:hover,
+.navbar-light .navbar-brand:focus,
+.navbar-light .navbar-brand:visited {
+    color: rgba(255,255,255,1);
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+.banner {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url('Images/banner.jpg');
+    background-size:cover;
+    margin-bottom:0;
+}
+    .banner:before,
+    .sec2:before,
+    .contact:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 400px;
+        background: linear-gradient(#000, transparent);
+        pointer-events: none;
+    }
+    .banner:after,
+    .sec2:after,
+    .contact:after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 400px;
+        background: linear-gradient(360deg, #000, transparent);
+        pointer-events: none;
+    }
+.height100p {
+    height:100vh;
+}
+.h100 {
+    height:100%;
+}
+.contentBox {
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    z-index:10;
+}
+.contentBox h1 {
+    font-weight:800;
+    color:#fff;
+    text-transform:uppercase;
+    font-size:5rem;
+}
+.contentBox p {
+  color:#fff;
+  font-size:1.3rem;
+}
+.sec1 {
+    padding: 100px 0;
+    background: #000;
+}
+.headerText {
+    color:#fff;
+}
+.headerText h2 {
+    font-size:2.5rem;
+    margin-bottom:20px;
+}
+.placeBox {
+    position:relative;
+    max-width:250px;
+    height:250px;
+    margin:0 auto;
+    background: #000;
+    margin-top: 10px;
+}
+.placeBox .imgBx {
+    width: 100%;
+    height:100%;
+}
+.placeBox .imgBx img {
+    object-fit:cover;
+    width:100%;
+    height:100%;
+}
+.placeBox .content {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items: flex-end;
+}
+    .placeBox .content h3 {
+        position: relative;
+        margin: 0;
+        padding: 10px;
+        background: rgba(0,0,0,.7);
+        color:#fff;
+        font-size:20px;
+        font-weight:600;
+        width:100%;
+        text-align:center;
+    }
+    .placeBox .content span {
+        font-size: 16px;
+        font-weight: 400;
+    }
+.sec2 {
+    position: relative;
+    background: url('Images/banner.jpg');
+    background-size: cover;
+    height: 100vh;
+}
+.btnD1 {
+    border:2px solid #fff;
+    color:#000;
+    background:#fff;
+    border-radius:50px;
+    padding:15px 50px;
+    font-size:1.5rem;
+    outline:none;
+    font-weight:500;
+    margin-top:20px;
+}
+.our_team {
+    position: relative;
+    background: #000;
+    height: 100vh;
+    padding: 100px 0;
+}
+.contact {
+    position: relative;
+    padding: 100px 0;
+    background: url('Images/banner.jpg');
+    background-size: cover;
+    min-height: 100vh;
+}
+.contact .form-control {
+    background: transparent;
+    border:none;
+    border-bottom: 2px solid rgba(255,255,255,.2);
+    height:50px;
+    border-radius:10px;
+    background: rgba(0,0,0,.6);
+    color:#fff;
+    font-size:1.25rem;
+}
+
+ .contact .form-control:focus,
+ .contact .form-control:hover
+ {
+    border: none;
+    border-bottom: 2px solid rgba(255,255,255,1);
+    box-shadow: none;
+ }
+
+ .contact .textarea 
+ {
+    min-height:100px;
+ }
+ .contact label 
+ {
+    color:#fff;
+    font-size:1.25rem;
+ }
+
+ .contact form 
+ {
+    z-index: 1000;
+    position: relative;
+ }
+footer {
+    background:#000;
+    padding:50px 0 0;
+}
+.sci {
+    margin:0;
+    padding:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+ .sci li {
+     list-style:none;
+     margin:0 20px;
+ }
+ .sci li a {
+    color:#777;
+    font-size: 2em;
+    transition: 0.5s;
+ }
+
+ .sci li a:hover {
+    color: #fff;
+ }
+.cpryt {
+    margin-top:20px;
+    color: #777;
+    text-align:center;
+}
+.cpryt:hover {
+    color: #0d03f8;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+     padding-right: 1rem;
+     padding-left: 1rem;
+  }
+}
+
+
+@media (max-width: 992px) {
+
+    .navbar-light .navbar-toggler {
+        background: #fff;
+        border-radius: 20%;
+    }
+
+    .banner{
+        min-height: 100vh;
+        padding: 100px 0;
+    }
+
+    .contentBox h1,
+    .sec2 h1
+    {
+        font-size: 3rem;
+    }
+
+    .contentBox p {
+        font-size: 1rem;
+    }
+
+    .btnD1 {
+        padding: 7px 15px;
+    }
+
+    .footer {
+        background: #000;
+        padding: 10px 0 0px;
+    }
+
+    our_team {
+        padding: 100px 0;
+    }
+
+    .sec2 {
+        height: auto;
+        padding: 100px 0;
+    }
+
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+}
