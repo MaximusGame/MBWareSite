@@ -1,11 +1,14 @@
-﻿@import url('https://fonts.googleapis.com/css?family=Poppins');
+﻿@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:600|Gelasio|Neucha&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:600|Neucha&display=swap');
 *
 {
     outline: none !important;
     scroll-behavior: smooth;
 }
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Gelasio', serif;
 }
 header {
     position: relative;
@@ -19,11 +22,12 @@ p {
     background: transparent !important;
 }
 .navbar-light .navbar-toggler {
-    color: rgba(255,255,255,.8);
-    border-color: rgba(255,255,255,.8);
+    /*color: rgb(255, 255, 255);*/
+    border-color: rgba(255,255,255,1);
+    border: 2px solid #fff;
 }
 .navbar.scrolled {
-    background: #000 !important;
+    background: rgba(0, 0, 0, 0.94) !important;
     transition: 0.5s;
 }
 .navbar-light .navbar-nav .active > .nav-link,
@@ -31,7 +35,7 @@ p {
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .show > .nav-link {
     color: #000;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.37);
     border-radius: 10px;
 }
 
@@ -50,14 +54,20 @@ p {
     font-size: 2.5rem;
     font-weight: 600;
 }
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url('Images/menu_close.png');
+}
+
+
 .banner {
     position: relative;
     top: 0;
     width: 100%;
     height: 100vh;
     background-image: url('Images/banner.jpg');
-    background-size:cover;
-    margin-bottom:0;
+    background-size: cover;
+    margin-bottom: 0;
 }
     .banner:before,
     .sec2:before,
@@ -98,15 +108,66 @@ p {
     z-index:10;
 }
 .contentBox h1 {
-    font-weight:800;
-    color:#fff;
-    text-transform:uppercase;
-    font-size:5rem;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 5rem;
+   font-family: 'Barlow Condensed', sans-serif;
 }
+
+    .contentBox h2 {
+        /*font-weight: 600;*/
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 3rem;
+        font-family: 'Neucha', cursive;
+    }
 .contentBox p {
   color:#fff;
   font-size:1.3rem;
 }
+
+.box {
+    position:absolute;
+    top: 93%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+    .box span {
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-bottom: 2px solid rgba(255,255,255,1); 
+        border-right: 2px solid rgba(255,255,255,1);
+        transform: rotate(45deg);
+        margin: -10px;
+        animation: animate 2s infinite;
+    }
+
+.box span:nth-child(2) {
+    animation-delay: -0.2s;             
+}
+
+.box span:nth-child(3) {
+    animation-delay: -0.4s;
+}
+
+ @keyframes animate {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 2;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
+}
+
 .sec1 {
     padding: 100px 0;
     background: #000;
@@ -114,10 +175,11 @@ p {
 .headerText {
     color:#fff;
 }
-.headerText h2 {
-    font-size:2.5rem;
-    margin-bottom:20px;
-}
+    .headerText h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        font-family: 'Neucha', cursive;
+    }
 .placeBox {
     position:relative;
     max-width:250px;
@@ -165,24 +227,62 @@ p {
     background-size: cover;
     height: 100vh;
 }
+
+    .sec2 h4 {
+        color: rgba(255,255,255,1);
+        font-size: 2rem;
+        font-family: 'Neucha', cursive;
+    }
+
+.logo_container {
+    position:relative;
+}
+
+.logoBox {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.img_logo {
+    width:40%;
+    margin-top: 20px;
+    margin-left: auto;
+}
+
+.logoBox .img_logo img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
 .btnD1 {
-    border:2px solid #fff;
-    color:#000;
-    background:#fff;
-    border-radius:50px;
-    padding:15px 50px;
-    font-size:1.5rem;
-    outline:none;
-    font-weight:500;
-    margin-top:20px;
+    border: 2px solid #fff;
+    color: #fff;
+    background: rgba(0,0,0,.5);
+    border-radius: 20px;
+    padding: 15px 50px;
+    font-size: 1.5rem;
+    outline: none;
+    font-weight: 500;
+    margin-top: 20px;
 }
 .our_team {
     position: relative;
     background: #000;
-    height: 100vh;
+    height: auto;
     padding: 100px 0;
 }
-.contact {
+
+
+    .our_team h3 {
+        color: #f8ba38;
+        font-family: 'Neucha', cursive;
+        text-align:left;
+    }
+
+
+    .contact {
     position: relative;
     padding: 100px 0;
     background: url('Images/banner.jpg');
@@ -200,9 +300,9 @@ p {
     font-size:1.25rem;
 }
 
+
  .contact .form-control:focus,
- .contact .form-control:hover
- {
+ .contact .form-control:hover {
     border: none;
     border-bottom: 2px solid rgba(255,255,255,1);
     box-shadow: none;
@@ -211,6 +311,7 @@ p {
  .contact .textarea 
  {
     min-height:100px;
+    font-size: 1.5rem;
  }
  .contact label 
  {
@@ -257,56 +358,120 @@ footer {
     color: #0d03f8;
 }
 
+
+
 @media (min-width: 992px) {
   .navbar-expand-lg .navbar-nav .nav-link {
      padding-right: 1rem;
      padding-left: 1rem;
   }
+
 }
 
 
 @media (max-width: 992px) {
 
-    .navbar-light .navbar-toggler {
-        background: #fff;
-        border-radius: 20%;
+        .navbar-light .navbar-toggler {
+            background: rgba(10, 12, 103, 0.55);
+            border-radius: 20%;
+        }
+
+        .banner {
+            min-height: 100vh;
+            padding: 100px 0;
+        }
+
+        .contentBox h1 {
+            font-weight: 600;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 3rem;
+            font-family: 'Barlow Condensed', sans-serif;
+        }
+
+        .contentBox h2 {
+            /*font-weight: 600;*/
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 2rem;
+            font-family: 'Neucha', cursive;
+        }
+
+        .contentBox p {
+            color: #fff;
+            font-size: 1.3rem;
+        }
+
+
+        .sec2 h1 {
+            font-size: 3rem;
+        }
+
+       .sec2 h4 {
+          color: rgba(255,255,255,1);
+          font-size: 1.5rem;
+          font-family: 'Neucha', cursive;
+       }
+
+    .logo_container .col {
+        padding-right: 10px;
+        padding-left: 10px;
     }
 
-    .banner{
-        min-height: 100vh;
-        padding: 100px 0;
+    .img_logo {
+        width: 100%;
     }
 
-    .contentBox h1,
-    .sec2 h1
-    {
-        font-size: 3rem;
+        .contentBox p {
+            font-size: 1rem;
+        }
+
+        .btnD1 {
+            padding: 7px 15px;
+        }
+
+        .footer {
+            background: #000;
+            padding: 10px 0 0px;
+        }
+
+        our_team {
+            padding: 100px 0;
+        }
+
+        .sec2 {
+           min-height: 100vh;
+           padding: 100px 0;
+        }
+
+    .logoBox {
+        width: 100%;
+        height: 100%;
+        margin: auto;
     }
 
-    .contentBox p {
-        font-size: 1rem;
+    .img_logo {
+        width: 100%;
+        margin-top: 20px;
     }
 
-    .btnD1 {
-        padding: 7px 15px;
+    .logoBox .img_logo img {
+        object-fit: cover;
+        width: 80%;
+        height: 80%;
     }
 
-    .footer {
-        background: #000;
-        padding: 10px 0 0px;
-    }
+        .navbar-expand-lg .navbar-nav .nav-link {
+            padding-right: 1rem;
+            padding-left: 1rem;
+        }
 
-    our_team {
-        padding: 100px 0;
-    }
-
-    .sec2 {
-        height: auto;
-        padding: 100px 0;
-    }
-
-    .navbar-expand-lg .navbar-nav .nav-link {
-        padding-right: 1rem;
-        padding-left: 1rem;
-    }
+        .contact .textarea {
+            min-height: 100px;
+            font-size: 0.8rem;
+        }
 }
+
+
+
+
