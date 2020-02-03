@@ -307,7 +307,7 @@
                 var user_name = $('#user_name').val();
                 var user_email = $('#user_email').val();
                 var text_comment = $('#text_comment').val();
-				event.preventDefault();
+				//event.preventDefault();
 				if (user_name == "") {
 				  alert("Введите Ваше имя");
 				  return;
@@ -336,12 +336,13 @@
                         $('#user_email').val('');
                         $('#text_comment').val('');
 						alert(data.result);
-                    }
+                    },
 					
 					error: function () {
                         alert("Ошибка! Сообщение не отправлено. Попробуйте еще раз !");
-                    }
+                    },
                 });
+				event.preventDefault();
             });
         });
     </script>
