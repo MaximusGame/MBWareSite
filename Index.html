@@ -15,26 +15,26 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="#">MB-Ware</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button id="ButtonMenu" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#home">Главная</a>
+                            <a class="nav-link" href="#home" onclick="return CloseMenu();">Главная</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#service">Что мы делаем</a>
+                            <a class="nav-link" href="#service" onclick="return CloseMenu();">Что мы делаем</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#about">Используемые технологии</a>
+                            <a class="nav-link" href="#about" onclick="return CloseMenu();">Используемые технологии</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#cooperation">Как сотрудничать</a>
+                            <a class="nav-link" href="#cooperation" onclick="return CloseMenu();">Как сотрудничать</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#contact">Связаться с нами</a>
+                            <a class="nav-link" href="#contact" onclick="return CloseMenu();">Связаться с нами</a>
                         </li>
                     </ul>
                 </div>
@@ -125,7 +125,7 @@
         <div class="container h100">
             <div class="contentBox h100">
                 <div>
-                    <h2 data-aos="flip-up" data-aos-duration="1500" data-aos-delay="10">Технологии</h2>
+                    <h2 data-aos="flip-up" data-aos-duration="1500" data-aos-delay="10"><br>Технологии</h2>
                     <p>
                         Технологии которые мы используем, включает в себя как платформы и продукты ведущих мировых производителей ПО, так и технологии с открытым кодом.
                     </p>
@@ -352,8 +352,15 @@
     <script>
         $(document).scroll(function () {
             $('.navbar').toggleClass('scrolled', $(this).scrollTop() > $('.navbar').height());
-
         });
     </script>
+	
+	<script>
+      function CloseMenu() {
+		document.getElementById('ButtonMenu').click();
+	    return true;
+      }
+    </script>
+
 </body>
 </html>
